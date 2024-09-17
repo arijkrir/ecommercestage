@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<h1>Panier</h1>
+<div class="cart-container">
+  <div *ngFor="let produit of cartItems" class="cart-item">
+    <img loading="lazy" [src]="'http://localhost:5102' + produit.image" alt="{{ produit.image }}" class="cart-item-image">
+    <div class="cart-item-details">
+      <p><strong>Designation:</strong> {{ produit.designation }}</p>
+      <p><strong>Reference:</strong> {{ produit.reference }}</p>
+      <div class="quantity-controls">
+        <button (click)="decreaseQuantity(produit)">-</button>
+        <input type="number" [(ngModel)]="produit.quantity" min="1" class="quantity-input">
+        <button (click)="increaseQuantity(produit)">+</button>
+      </div>
+    </div>
+    <button class="btn-remove" (click)="removeFromCart(produit)">Supprimer</button>
+  </div>
+  <div *ngIf="cartItems.length === 0" class="cart-empty">
+    Votre panier est vide.
+  </div>
+</div>

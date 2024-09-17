@@ -1,0 +1,69 @@
+<nav class="navbar">
+  <div class="navbar-content">
+    <div class="left">
+      <span class="material-icons menu-icon" (click)="toggleSidebar()">menu</span>
+      <img src="assets/images/Logo.png" alt="Logo" class="company-logo">
+      <span class="company-name" (click)="navigateToProducts()">Arij's Eshop</span>
+      <div class="search-bar">
+        <input 
+          type="text" 
+          pInputText
+          placeholder="Rechercher..." 
+          [(ngModel)]="searchQuery"
+          (keydown.enter)="onSearch()">
+        <span class="material-icons" (click)="onSearch()">search</span>
+      </div>
+    </div>  
+    <div class="right">
+      <div class="nav-item">
+        <span class="material-icons help-icon">help_outline</span>
+        <h4>Aide</h4>
+      </div>
+      <div class="nav-item" (click)="toggleAccountOptions()">
+        <span class="material-icons login-icon">person</span>
+        <h4>Compte</h4>
+        <div class="account-options" *ngIf="showAccountOptions">
+          <div class="arrow-up"></div>
+          <div class="accordion">
+            <div class="accordion-item" *ngIf="authService.isLoggedIn()" (click)="logout()">
+              <i class="pi pi-sign-out"></i>
+              <h5>Se déconnecter</h5>
+            </div>
+            <div class="accordion-item" *ngIf="!authService.isLoggedIn()" (click)="login()">
+              <i class="pi pi-sign-in"></i>
+              <h5>Se connecter</h5>
+            </div>
+            <div class="divider"></div>
+            <div class="accordion-item" (click)="register()">
+              <i class="pi pi-user-plus"></i>
+              <h5>Créer un compte</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item" (click)="navigateToCart()">
+        <span class="material-icons cart-icon">shopping_cart</span>
+        <h4>Panier</h4>
+        <span *ngIf="cartItems.length > 0" class="cart-count">{{ cartItems.length }}</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar" [class.open]="isSidebarOpen">
+  <p-accordion>
+    <p-accordionTab header="Catégories">
+      <div *ngFor="let category of categories; let i = index" class="category-item" (click)="navigateToCategory(category.Categorie)">
+        <i class="material-icons">category</i> {{ category.Categorie }} ({{ i + 1 }})
+      </div>
+    </p-accordionTab>
+  </p-accordion>
+
+  <div class="statistics" (click)="navigateToStatistics()">
+    <span class="material-icons">bar_chart</span> Statistiques
+  </div>
+  <div class="profile" (click)="navigateToProfile()">
+    <span class="material-icons">person</span> Profil
+  </div>
+</div>

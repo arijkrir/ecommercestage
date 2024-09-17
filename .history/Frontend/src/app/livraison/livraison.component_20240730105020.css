@@ -1,0 +1,61 @@
+.livraison-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.livraison-form .p-field {
+  margin-bottom: 20px;
+}
+
+.livraison-options {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option input {
+  display: none;
+}
+
+.option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option label i {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #007bff; /* Adjust this color as needed */
+}
+
+.option input:checked + label {
+  border: 2px solid #007bff; /* Adjust this color as needed */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.livraison-summary {
+  margin-top: 20px;
+}
+
+.livraison-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.total-after-promo {
+  font-weight: bold;
+  color: red;
+}

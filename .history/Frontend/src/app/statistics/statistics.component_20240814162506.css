@@ -1,0 +1,79 @@
+/* Styles pour le conteneur principal des cartes */
+.statistics-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 70px;
+}
+
+/* Styles généraux pour chaque carte de statistiques */
+.stat-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Assure que le contenu ne dépasse pas */
+}
+
+/* Styles pour les titres des cartes */
+.stat-card h3 {
+  margin-top: 0;
+}
+
+/* Styles pour les paragraphes des cartes */
+.stat-card p {
+  margin-bottom: 0;
+}
+
+/* Styles pour le conteneur du graphique */
+.chart-container {
+  background-color: #d3d3d3; /* Fond gris pour le conteneur du diagramme */
+  padding: 10px; /* Réduit le padding pour éviter le débordement */
+  border-radius: 8px;
+  width: 100%;
+  height: 300px; /* Fixe une hauteur pour contenir le graphique */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour le tableau PrimeNG */
+.user-table, .product-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse; /* Fusionne les bordures des cellules pour une apparence uniforme */
+}
+
+.user-table th, .user-table td, .product-table th, .product-table td {
+  text-align: center; /* Centre le texte dans les cellules */
+  padding: 12px; /* Ajoute un peu de padding pour la lisibilité */
+  border: 1px solid #ddd; /* Ajoute une bordure légère autour des cellules */
+}
+
+.product-table th {
+  background-color: #f1f1f1; /* Fond clair pour les en-têtes du tableau */
+  font-weight: bold; /* Met en gras les en-têtes */
+}
+
+.product-table img {
+  width: 50px; /* Fixe une largeur pour les images */
+  height: 50px; /* Fixe une hauteur pour les images */
+  object-fit: cover; /* Assure que les images s'ajustent sans déformation */
+  border-radius: 4px; /* Ajoute un léger arrondi aux coins des images */
+}
+
+/* Styles pour les cellules du tableau de produits */
+.product-table .table-cell {
+  padding: 10px; /* Réduit le padding pour une présentation plus compacte */
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Ajoute une couleur de fond alternative pour les lignes paires */
+}
+
+.product-table tr:hover {
+  background-color: #e2e2e2; /* Met en surbrillance la ligne survolée */
+}

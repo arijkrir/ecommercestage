@@ -1,0 +1,19 @@
+.signup-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  .signup-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .p-field {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  

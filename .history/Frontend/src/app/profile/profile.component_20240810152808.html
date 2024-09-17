@@ -1,0 +1,27 @@
+<!-- profile.component.html -->
+
+<div class="profile-container">
+    <h2>Mon Profil</h2>
+    <form (ngSubmit)="saveProfile()">
+      <label>Nom:</label>
+      <input [(ngModel)]="user.firstName" name="firstName" required />
+  
+      <label>Prénom:</label>
+      <input [(ngModel)]="user.lastName" name="lastName" required />
+  
+      <label>Ville:</label>
+      <input [(ngModel)]="user.city" name="city" required />
+  
+      <label>Numéro de téléphone:</label>
+      <input [(ngModel)]="user.phone" name="phone" required />
+  
+      <label>Code Postal:</label>
+      <input [(ngModel)]="user.postalCode" name="postalCode" required />
+  
+      <label>Email:</label>
+      <input [(ngModel)]="user.email" name="email" required />
+  
+      <button type="submit">Enregistrer les modifications</button>
+    </form>
+  </div>
+  

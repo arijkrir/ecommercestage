@@ -1,0 +1,97 @@
+.profile-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top:90px
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-header h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .profile-header p {
+    font-size: 16px;
+    color: #777;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .profile-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #fc90a1; /* Rose clair */
+    border-bottom: 2px solid #fc90a1; /* Rose clair */
+    padding-bottom: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="tel"],
+  .form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="email"]:focus,
+  .form-group input[type="tel"]:focus,
+  .form-group input[type="number"]:focus {
+    border-color: #fc90a1; /* Rose clair */
+    outline: none;
+  }
+  
+  .form-actions {
+    text-align: right;
+  }
+  
+  .btn-save {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #fc90a1; /* Rose clair */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-save:hover {
+    background-color: #fc90a1; /* Rose clair un peu plus foncé */
+  }
+  

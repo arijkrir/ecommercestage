@@ -1,0 +1,33 @@
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantity-container button {
+    background-color: #f0f0f0; /* Couleur de fond des boutons */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 4px; /* Coins arrondis */
+    padding: 5px 10px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur pour indiquer que c'est cliquable */
+    margin: 0 5px; /* Espacement entre les boutons et la quantité */
+    transition: background-color 0.3s; /* Transition douce pour les changements de couleur */
+  }
+  
+  .quantity-container button:hover {
+    background-color: #e0e0e0; /* Changement de couleur au survol */
+  }
+  
+  .quantity-container button:disabled {
+    background-color: #f9f9f9; /* Couleur différente quand désactivé */
+    cursor: not-allowed; /* Curseur indiquant que c'est désactivé */
+  }
+  
+  .quantity-container span {
+    font-size: 18px; /* Taille de la police pour la quantité */
+    font-weight: bold; /* Mettre la quantité en gras */
+    width: 40px; /* Largeur fixe pour alignement */
+    text-align: center; /* Centrer le texte */
+  }
+  

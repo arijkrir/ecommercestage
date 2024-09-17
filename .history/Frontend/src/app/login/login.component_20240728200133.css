@@ -1,0 +1,70 @@
+
+  
+  /* Styles for the login form */
+  .login-form {
+    max-width: 500px;
+    margin: 90px auto;
+    padding: 30px;
+    border: 1px solid var(--gray-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .login-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .login-form h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--dark-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Customizing PrimeNG input style */
+  .form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group input:focus {
+    border-color: var(--baby-pink-hover);
+    outline: none;
+  }
+  
+  /* Customizing PrimeNG button style */
+  button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--baby-pink);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--baby-pink-hover);
+  }
+  

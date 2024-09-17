@@ -1,0 +1,135 @@
+.main-content-container {
+  width: 85%;
+  margin: 80px auto;
+}
+
+.product-details-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex; /* Add this for better alignment */
+}
+
+.product-details {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-image {
+  width: 600px; /* Set a fixed width for images */
+  height: 300px; /* Set a fixed height for images */
+  margin-right: 30px;
+  border-radius: 8px;
+  object-fit: contain; /* Ensure images cover the container */
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.2;
+  padding-left: 40px;
+}
+
+.product-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #a1a1a1;
+  margin-right: 15px;
+}
+
+.promo-price {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.available {
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.not-available {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.quantity-and-cart {
+  margin-top: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quantity-controls button {
+  background-color: #ddd;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity-controls input {
+  width: 50px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.btn-add-cart {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fc78a6;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cart-icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.upselling-products-container, .cross-selling-products-container {
+  text-align: center;
+}
+
+.upselling-products, .cross-selling-products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.upselling-product-card, .cross-selling-product-card {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 150px; /* Set a fixed width for the product cards */
+  height: 250px; /* Set a fixed height for the product cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upselling-product-image, .cross-selling-product-image {
+  width: 100%; /* Make the images take the full width of their container */
+  height: 150px; /* Set a fixed height for images */
+  object-fit: contain; /* Ensure images cover the container */
+}

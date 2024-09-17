@@ -1,0 +1,84 @@
+/* Styles pour le conteneur du formulaire */
+.signup-form {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.signup-form h2 {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles pour les groupes de formulaires */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Styles pour les champs de saisie PrimeNG */
+.p-inputtext {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    box-shadow: none; /* Réinitialiser toute ombre portée par défaut */
+}
+
+.p-inputtext:focus {
+    border-color: #ffb6c1; /* Rose bébé pour le focus */
+    outline: none;
+    box-shadow: 0 0 0 1px #ffb6c1; /* Ajout d'une ombre portée de couleur rose bébé */
+}
+
+.p-inputtext:hover {
+    border-color: #ffb6c1; /* Rose bébé pour le survol */
+}
+
+.p-inputtext.p-focus {
+    border-color: #ffb6c1 !important; /* Forcer la couleur rose bébé pour le focus */
+    box-shadow: 0 0 0 1px #ffb6c1 !important; /* Forcer l'ombre portée pour le focus */
+}
+
+/* Styles pour les boutons PrimeNG */
+.p-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffb6c1; /* Rose bébé pour le bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.p-button:hover {
+    background-color: #ff99ac; /* Rose bébé plus foncé pour le survol */
+}
+
+/* Styles supplémentaires pour les boutons PrimeNG */
+.p-button-icon-only .p-button-icon {
+    color: #fff;
+}

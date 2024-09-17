@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="statistics-container">
+  <div class="stat-card">
+    <h3>Ville la plus active</h3>
+    <p *ngIf="topCity">La ville avec le plus de commandes est {{ topCity.Ville }} avec {{ topCity.Commandes }} commandes.</p>
+    <p *ngIf="!topCity">Chargement des données...</p>
+  </div>
+    <div class="stat-card">
+      <h3>Ville la plus active</h3>
+      <p>Top ville par achats</p>
+      <!-- Ajouter des détails dynamiques ici -->
+    </div>
+    <div class="stat-card">
+      <h3>Produits les plus vendus</h3>
+      <p>Top produits les plus vendus</p>
+      <!-- Ajouter des détails dynamiques ici -->
+    </div>
+  </div>
+  

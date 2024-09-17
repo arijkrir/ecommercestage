@@ -1,0 +1,252 @@
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #737373;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100; /* Augmenter la valeur du z-index */
+  padding: 7px 0;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .left,
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu-icon {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.navbar .company-logo {
+  height: 55px;
+  margin-left: 40px;
+}
+
+.navbar .company-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+.navbar .search-bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  width: 400px;
+  border-color: #e3dbdc !important;
+}
+
+.navbar .search-bar .material-icons {
+  margin-left: 7px;
+  cursor: pointer;
+  font-size: 27px;
+}
+
+.navbar .right .nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  cursor: pointer;
+  margin: 0 10px;
+  position: relative;
+}
+
+.navbar .nav-item h4 {
+  margin: 0 5px;
+}
+
+.navbar .cart-count {
+  background-color: #ff556f;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.material-icons.cart-icon {
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.account-options {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  color: #767575;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  z-index: 1101; /* Assurer que le menu de compte reste au-dessus de la navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.account-options .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+}
+
+.account-options .divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 8px 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  top: 20;
+  left: -250px; /* Sidebar hidden by default */
+  background-color: #737373;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 1000; /* Keep z-index lower than the navbar */
+  padding-top: 60px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure space between items and footer */
+}
+
+.sidebar.open {
+  left: 0; /* Sidebar shown when open */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex: 1; /* Allow the list to take available space */
+}
+
+.sidebar ul li {
+  padding: 20px;
+  text-align: left;
+  font-size: 15px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.sidebar ul li i {
+  margin-right: 15px;
+}
+
+/* Ensure that .category-item, .profile, and .statistics are in the right place */
+.sidebar .category-item,
+.sidebar .profile, 
+.sidebar .statistics {
+  padding: 15px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #737373; /* Ensure consistent background color */
+  color: white; /* Ensure consistent text color */
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar .category-item:hover,
+.sidebar .profile:hover,
+.sidebar .statistics:hover {
+  background-color: #626262; /* Slightly darker on hover */
+  border-radius: 5px;
+}
+
+/* Add space between the categories and the rest */
+.sidebar .category-item:not(:last-child),
+.sidebar .profile,
+.sidebar .statistics {
+  margin-bottom: 0px;
+}
+
+/* Divider between categories */
+.sidebar .divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+/* Position profile and statistics at the bottom */
+.sidebar .profile {
+
+}
+
+.sidebar .statistics {
+  margin-top: auto; /* Push profile to the bottom */
+  border-top: 1px solid #ccc;}
+
+/* Accordion Tab Styles */
+::ng-deep .p-accordion .p-accordion-header {
+  background-color: #737373 !important; /* Couleur de fond de l'entête de l'accordion */
+  color: white !important; /* Couleur du texte */
+  padding: 10px 15px; /* Assurez-vous que le padding est adéquat */
+}
+
+::ng-deep .p-accordion .p-accordion-toggle-icon {
+  color: white !important; /* Couleur des icônes */
+}
+
+::ng-deep .p-accordion .p-accordion-content {
+  background-color: #737373 !important; /* Couleur de fond du contenu de l'accordion */
+  color: white !important; /* Couleur du texte */
+  padding: 0; /* Assurez-vous que le padding est adéquat */
+}
+
+/* Les éléments de catégorie dans l'accordion */
+::ng-deep .p-accordion .p-accordion-tab .p-accordion-content .category-item {
+  background-color: #737373 !important; /* Couleur de fond des éléments */
+  padding: 15px;
+  font-size: 15px;
+  color: white !important; /* Couleur du texte */
+  border-bottom: 1px solid #ccc; /* Bordure en bas des éléments */
+}
+
+/* Hover des éléments de catégorie */
+::ng-deep .p-accordion .p-accordion-tab .p-accordion-content .category-item:hover {
+  background-color: #626262 !important; /* Couleur de fond au survol */
+  border-radius: 5px; /* Coins arrondis au survol */
+}
+
+/* Styles pour le header de l'accordion au survol */
+::ng-deep .p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled) .p-accordion-header-link {
+  background: #737373 !important; /* Couleur de fond grise */
+  border-color: #737373 !important; /* Couleur de bordure gris foncé */
+  color: #ffffff !important; /* Couleur du texte blanche */
+}
+
+::ng-deep .p-accordion .p-accordion-header:not(.p-highlight):not(.p-disabled):hover .p-accordion-header-link {
+  background: #737373 !important; /* Couleur de fond grise */
+  border-color: #737373 !important; /* Couleur de bordure gris foncé */
+  color: #ffffff !important; /* Couleur du texte blanche */
+}

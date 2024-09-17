@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="produit" class="product-details-container">
+  <h1>{{ produit.designation }}</h1>
+  <img [src]="'http://localhost:5102' + produit.image" alt="{{ produit.designation }}" class="product-image">
+  <p><strong>Référence: </strong>{{ produit.reference }}</p>
+  <p><strong>Prix: </strong>
+    <span *ngIf="produit.oldPrice" class="old-price">{{ produit.oldPrice | number:'1.2-2' }} DT</span>
+    <span class="promo-price">{{ produit.promoPrice | number:'1.2-2' }} DT</span>
+  </p>
+  <div [ngClass]="{'available': produit.available, 'not-available': !produit.available}">
+    {{ produit.available ? 'Disponible' : 'Non disponible' }}
+  </div>
+  <p *ngIf="produit.stock">Il reste {{ produit.stock }} produits</p>
+  <div class="quantity-controls">
+    <button (click)="decreaseQuantity(produit)">-</button>
+    <input type="number" [(ngModel)]="produit.quantity" min="1" class="quantity-input">
+    <button (click)="increaseQuantity(produit)">+</button>
+  </div>
+  <button class="btn-add-cart" (click)="addToCart()">
+    <span class="material-icons cart-icon">shopping_cart</span> Ajouter au panier
+  </button>
+</div>

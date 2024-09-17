@@ -1,0 +1,217 @@
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #505050; /* Slightly darker shade for a modern look */
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1100; /* Ensure navbar stays on top */
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar .left,
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu-icon {
+  cursor: pointer;
+  font-size: 28px;
+  transition: color 0.3s;
+}
+
+.navbar .menu-icon:hover {
+  color: #dcdcdc; /* Lighter hover color */
+}
+
+.navbar .company-logo {
+  height: 50px;
+  margin-left: 20px;
+}
+
+.navbar .company-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.navbar .company-name:hover {
+  color: #dcdcdc; /* Lighter hover color */
+}
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  flex-grow: 1;
+}
+
+.navbar .search-bar input {
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: border-color 0.3s;
+}
+
+.navbar .search-bar input:focus {
+  border-color: #ff556f; /* Highlight border on focus */
+  outline: none;
+}
+
+.navbar .search-bar .material-icons {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.navbar .search-bar .material-icons:hover {
+  color: #ff556f; /* Highlight icon on hover */
+}
+
+.navbar .right .nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.navbar .nav-item:hover {
+  color: #dcdcdc; /* Lighter hover color */
+}
+
+.navbar .nav-item h4 {
+  margin: 0 5px;
+}
+
+.navbar .cart-count {
+  background-color: #ff556f;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.material-icons.cart-icon {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+/* Account Options Dropdown */
+.account-options {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 220px;
+  z-index: 1101;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow for depth */
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.account-options .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+}
+
+.accordion .accordion-item {
+  margin: 0;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.accordion .accordion-item i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.accordion .accordion-item h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.accordion .accordion-item:hover {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.account-options .divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar hidden by default */
+  background-color: #505050;
+  color: white;
+  overflow-x: hidden;
+  transition: left 0.4s ease-in-out;
+  z-index: 1000; /* Lower z-index than navbar */
+  padding-top: 60px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.sidebar.open {
+  left: 0; /* Sidebar shown when open */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li i {
+  margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: #606060; /* Slightly lighter on hover */
+}

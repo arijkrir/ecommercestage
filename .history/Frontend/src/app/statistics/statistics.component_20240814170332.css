@@ -1,0 +1,89 @@
+/* Styles pour le conteneur principal des cartes */
+.statistics-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; /* Réduit le padding autour des cartes */
+  margin-top: 70px; /* Réduit la marge supérieure pour rapprocher les cartes du haut de la page */
+}
+
+/* Styles généraux pour chaque carte de statistiques */
+.stat-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width:30%; /* Réduit la largeur des cartes */
+  padding: 10px; /* Réduit le padding à l'intérieur des cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-size: 1.0rem; /* Réduit la taille de la police pour une apparence plus compacte */
+}
+
+/* Styles pour les titres des cartes */
+.stat-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Styles pour les paragraphes des cartes */
+.stat-card p {
+  margin-bottom: 0;
+  font-size: 0.9rem; /* Réduit la taille de la police des paragraphes */
+}
+
+/* Styles pour le conteneur du graphique */
+.chart-container {
+  margin-left: 50px;
+  padding: 0px; /* Ajuster le padding si nécessaire */
+  border-radius: 8px;
+  width: 100%; /* S'assure que le conteneur prend toute la largeur disponible */
+  height: 350px; /* Augmenter la hauteur du conteneur du graphique */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+
+/* Styles pour le tableau PrimeNG */
+.user-table, .product-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+  text-align: center;
+  padding: 20px; /* Réduit le padding dans les cellules pour plus de compacité */
+  border: 1px solid #ddd;
+}
+.product-table th, .product-table td {
+  text-align: center;
+  padding: 8px; /* Réduit le padding dans les cellules pour plus de compacité */
+  border: 1px solid #ddd;
+}
+
+.product-table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  font-size: 0.9rem; /* Réduit la taille de la police des en-têtes du tableau */
+}
+
+.product-table img {
+  width: 40px; /* Réduit la largeur des images */
+  height: 40px; /* Réduit la hauteur des images */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-table .table-cell {
+  padding: 8px; /* Réduit le padding pour les cellules des produits */
+}
+
+.product-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.product-table tr:hover {
+  background-color: #e2e2e2;
+}

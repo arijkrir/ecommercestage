@@ -1,0 +1,16 @@
+-csv prices
+-csv qte from ftp server
+-lazy load img
+-20 x 5
+-qte ordered overview
+-quick search
+-cache data serverside sos ftp 
+-annule et remplace (debut)
+-checkout
+-dashboard
+-categoriser les ventes selon les categories les plus vedues
+-faire algo de presentation du produit en upselling et cross-selling
+-faire les flux de donnees Buberona
+-faire des requetes power-query ---> powerBI affiche un rapport
+-Exporter le rapport dans Iframe via url dans notre projet
+-Data flow , power-query , langage DAX

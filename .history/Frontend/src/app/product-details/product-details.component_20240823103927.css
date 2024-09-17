@@ -1,0 +1,83 @@
+.product-details-container {
+  width: 100%; /* Réduit la largeur maximale du container */
+  margin: 90px auto; /* Réduit la marge supérieure et inférieure */
+  padding: 20px; /* Ajoute un peu de padding pour espacer les éléments */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-details {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-image {
+  max-width: 30%; /* Réduit la largeur maximale de l'image */
+  max-height: 300px; /* Fixe une hauteur maximale pour l'image */
+  margin-right: 30px; /* Ajoute un peu plus d'espace entre l'image et les détails */
+  border-radius: 8px;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px; /* Augmente légèrement la taille du texte */
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #a1a1a1;
+  margin-right: 15px;
+}
+
+.promo-price {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 13px; /* Agrandit un peu le texte du prix promo */
+}
+
+.available, .not-available {
+  font-size: 10px; /* Ajuste la taille du texte pour la disponibilité */
+}
+
+.quantity-and-cart {
+  margin-top: 10px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.quantity-controls button {
+  background-color: #ddd;
+  border: none;
+  padding: 3px 7px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.quantity-controls input {
+  width: 50px;
+  text-align: center;
+  margin: 0 15px;
+}
+
+.btn-add-cart {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e53935;
+  color: #fff;
+  padding: 7px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px; /* Augmente la taille du bouton */
+}
+
+.cart-icon {
+  margin-right: 8px;
+  font-size: 20px; /* Agrandit un peu l'icône du panier */
+}

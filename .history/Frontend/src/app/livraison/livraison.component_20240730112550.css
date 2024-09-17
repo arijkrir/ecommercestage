@@ -1,0 +1,69 @@
+/* Conteneur principal */
+.livraison-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Étapes */
+.p-steps {
+  margin-bottom: 2rem;
+}
+
+.p-steps .p-steps-item .p-steps-number {
+  background-color: #ffb3c6 !important; /* Rose clair */
+  color: #fff !important; /* Texte blanc */
+  border-color: #ffb3c6 !important; /* Bordure rose clair */
+}
+
+.p-steps .p-steps-item.p-steps-item-active .p-steps-number {
+  background-color: #ff9eac !important; /* Rose légèrement plus foncé */
+  border-color: #ff9eac !important; /* Bordure rose légèrement plus foncé */
+}
+
+.p-steps .p-steps-item:hover .p-steps-number {
+  background-color: #ff9eac !important; /* Rose légèrement plus foncé */
+  border-color: #ff9eac !important; /* Bordure rose légèrement plus foncé */
+}
+
+.p-steps .p-steps-item.p-steps-item-complete .p-steps-number {
+  background-color: #ffb3c6 !important; /* Rose clair */
+  border-color: #ffb3c6 !important; /* Bordure rose clair */
+}
+
+/* Formulaire */
+.livraison-form .p-field {
+  margin-bottom: 1rem;
+}
+
+.livraison-options .option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.livraison-options input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.card-fields .p-field {
+  margin-top: 1rem;
+}
+
+/* Résumé */
+.livraison-summary {
+  margin-top: 1rem;
+}
+
+.livraison-summary .total-after-promo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff9eac; /* Rose légèrement plus foncé */
+}
+
+/* Boutons */
+.livraison-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}

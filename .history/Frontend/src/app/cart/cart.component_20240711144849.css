@@ -1,0 +1,131 @@
+
+
+.material-icons {
+  cursor: pointer;
+}
+
+.material-icons.cart-icon {
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.account-options {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 3px;
+  width: 140px;
+  z-index: 1001;
+}
+
+.account-options .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: -10px;
+  right: 7px;
+}
+
+.accordion .accordion-item {
+  margin: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.accordion .accordion-item:hover {
+  background-color: #f1f1f1;
+}
+
+.account-options .divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 15px;
+}
+
+/* Cart Styles */
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 40px;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+}
+
+.cart-item-details p {
+  margin: 5px 0;
+}
+
+.btn-remove {
+  background-color: #ff6666;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-remove:hover {
+  background-color: #ff3333;
+}
+
+h2 {
+  margin-bottom: 20px;
+  margin-top: 80px; /* Adjusted for fixed navbar */
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 20px;
+  font-size: 18px;
+  color: #666;
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center; /* Center content */
+  position: relative;
+  top: 20px;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.btn-finalize, .btn-back {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-finalize:hover, .btn-back:hover {
+  background-color: #218838;
+}
+
+.btn-back {
+  background-color: #007bff;
+}
+
+.btn-back:hover {
+  background-color: #0056b3;
+}

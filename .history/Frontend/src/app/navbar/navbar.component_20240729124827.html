@@ -1,0 +1,13 @@
+<nav>
+  <div class="logo">
+    <a routerLink="/produits">Mon E-Commerce</a>
+  </div>
+  <input 
+    type="text" 
+    pInputText
+    placeholder="Rechercher..." 
+    [(ngModel)]="searchQuery"
+    (keydown.enter)="onSearch()">
+  <span class="material-icons" (click)="onSearch()">search</span>
+  <span class="material-icons" (click)="toggleCart()">shopping_cart</span>
+</nav>

@@ -1,0 +1,107 @@
+<app-navbar></app-navbar>
+
+<div class="livraison-container">
+  <p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="true"></p-steps>
+
+  <form class="livraison-form">
+    <div *ngIf="activeIndex === 0">
+      <!-- Informations personnelles -->
+      <div class="p-field">
+        <label for="nom">Nom</label>
+        <input id="nom" type="text" pInputText [(ngModel)]="livraisonForm.nom" name="nom">
+      </div>
+      <div class="p-field">
+        <label for="prenom">Prénom</label>
+        <input id="prenom" type="text" pInputText [(ngModel)]="livraisonForm.prenom" name="prenom">
+      </div>
+      <div class="p-field">
+        <label for="email">Email</label>
+        <input id="email" type="email" pInputText [(ngModel)]="livraisonForm.email" name="email">
+      </div>
+      <div class="p-field">
+        <label for="telephone">Téléphone</label>
+        <input id="telephone" type="tel" pInputText [(ngModel)]="livraisonForm.telephone" name="telephone">
+      </div>
+    </div>
+
+    <div *ngIf="activeIndex === 1">
+      <!-- Choix de la livraison -->
+      <div class="p-field">
+        <label for="rue">Rue</label>
+        <input id="rue" type="text" pInputText [(ngModel)]="livraisonForm.rue" name="rue">
+      </div>
+      <div class="p-field">
+        <label for="ville">Ville</label>
+        <input id="ville" type="text" pInputText [(ngModel)]="livraisonForm.ville" name="ville">
+      </div>
+      <div class="p-field">
+        <label for="codePostal">Code Postal</label>
+        <input id="codePostal" type="text" pInputText [(ngModel)]="livraisonForm.codePostal" name="codePostal">
+      </div>
+      <div class="p-field">
+        <label for="typeLivraison">Type de Livraison</label>
+        <div class="livraison-options">
+          <div class="option">
+            <input type="radio" id="especes" name="typeLivraison" value="Especes" [(ngModel)]="livraisonForm.typeLivraison" (change)="onPaymentTypeChange()">
+            <label for="especes">
+              <i class="fas fa-money-bill-wave"></i>
+              Espèces à la livraison
+            </label>
+          </div>
+          <div class="option">
+            <input type="radio" id="carteEdinar" name="typeLivraison" value="Carte Edinar" [(ngModel)]="livraisonForm.typeLivraison" (change)="onPaymentTypeChange()">
+            <label for="carteEdinar">
+              <i class="fas fa-credit-card"></i>
+              Carte Edinar
+            </label>
+          </div>
+          <div class="option">
+            <input type="radio" id="carteBancaire" name="typeLivraison" value="Carte Bancaire" [(ngModel)]="livraisonForm.typeLivraison" (change)="onPaymentTypeChange()">
+            <label for="carteBancaire">
+              <i class="fas fa-university"></i>
+              Carte Bancaire
+            </label>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="livraisonForm.typeLivraison === 'Carte Edinar' || livraisonForm.typeLivraison === 'Carte Bancaire'" class="card-fields">
+        <div class="p-field">
+          <label for="numeroCarte">Numéro de la carte</label>
+          <input id="numeroCarte" type="text" pInputText [(ngModel)]="livraisonForm.numeroCarte" name="numeroCarte">
+        </div>
+        <div class="p-field">
+          <label for="codeCarte">Code de la carte</label>
+          <input id="codeCarte" type="text" pInputText [(ngModel)]="livraisonForm.codeCarte" name="codeCarte">
+        </div>
+      </div>
+      <div class="p-field promo-field">
+        <label for="codePromo">Code Promo</label>
+        <input id="codePromo" type="text" pInputText [(ngModel)]="livraisonForm.codePromo" name="codePromo">
+      </div>
+    </div>
+
+    <div *ngIf="activeIndex === 2" class="livraison-summary">
+      <h3>Récapitulatif de la commande</h3>
+      <p><strong>Nom:</strong> {{ livraisonForm.nom }}</p>
+      <p><strong>Prénom:</strong> {{ livraisonForm.prenom }}</p>
+      <p><strong>Email:</strong> {{ livraisonForm.email }}</p>
+      <p><strong>Téléphone:</strong> {{ livraisonForm.telephone }}</p>
+      <p><strong>Rue:</strong> {{ livraisonForm.rue }}</p>
+      <p><strong>Ville:</strong> {{ livraisonForm.ville }}</p>
+      <p><strong>Code Postal:</strong> {{ livraisonForm.codePostal }}</p>
+      <p><strong>Type de Livraison:</strong> {{ livraisonForm.typeLivraison }}</p>
+      <div *ngIf="livraisonForm.typeLivraison === 'Carte Edinar' || livraisonForm.typeLivraison === 'Carte Bancaire'">
+        <p><strong>Numéro de la carte:</strong> {{ livraisonForm.numeroCarte }}</p>
+        <p><strong>Code de la carte:</strong> {{ livraisonForm.codeCarte }}</p>
+      </div>
+      <p><strong>Code Promo:</strong> {{ livraisonForm.codePromo }}</p>
+      <p class="total-after-promo"><strong>Total après promo:</strong> {{ totalAfterPromo }} TND</p>
+    </div>
+
+    <div class="livraison-buttons">
+      <button type="button" pButton label="Précédent" icon="pi pi-chevron-left" (click)="previousStep()"></button>
+      <button *ngIf="activeIndex < 2" type="button" pButton label="Suivant" icon="pi pi-chevron-right" iconPos="right" (click)="nextStep()"></button>
+      <button *ngIf="activeIndex === 2" type="button" pButton label="Confirmer" icon="pi pi-check" iconPos="right" (click)="confirmOrder()"></button>
+    </div>
+  </form>
+</div>

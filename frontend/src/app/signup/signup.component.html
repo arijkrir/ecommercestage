@@ -1,0 +1,40 @@
+<!-- signup.component.html -->
+<app-navbar></app-navbar>
+<div class="signup-form">
+  <h2>Créer un compte</h2>
+  <form (ngSubmit)="submitSignUpForm()" #signupForm="ngForm">
+    <div class="form-group">
+      <label for="nom">Nom :</label>
+      <input pInputText type="text" id="nom" name="nom" [(ngModel)]="signupFormModel.nom" required>
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom :</label>
+      <input pInputText type="text" id="prenom" name="prenom" [(ngModel)]="signupFormModel.prenom" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Adresse Email :</label>
+      <input pInputText type="email" id="email" name="email" [(ngModel)]="signupFormModel.email" required>
+    </div>
+    <div class="form-group">
+      <label for="telephone">Numéro de téléphone :</label>
+      <input pInputText type="tel" id="telephone" name="telephone" [(ngModel)]="signupFormModel.telephone" required>
+    </div>
+    <div class="form-group">
+      <label for="rue">Rue :</label>
+      <input pInputText type="text" id="rue" name="rue" [(ngModel)]="signupFormModel.rue" required>
+    </div>
+    <div class="form-group">
+      <label for="ville">Ville :</label>
+      <input pInputText type="text" id="ville" name="ville" [(ngModel)]="signupFormModel.ville" required>
+    </div>
+    <div class="form-group">
+      <label for="codePostal">Code Postal :</label>
+      <input pInputText type="text" id="codePostal" name="codePostal" [(ngModel)]="signupFormModel.codePostal" required>
+    </div>
+    <div class="form-group">
+      <label for="mdp">Mot de Passe :</label>
+      <input pInputText type="password" id="MotdePasse" name="MotdePasse" [(ngModel)]="signupFormModel.MotdePasse" required>
+    </div>
+    <button pButton type="submit" label="Confirmer" icon="pi pi-check"></button>
+  </form>
+</div>

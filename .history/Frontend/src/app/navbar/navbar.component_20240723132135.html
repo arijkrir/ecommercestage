@@ -1,0 +1,33 @@
+<nav>
+  <div class="navbar-container">
+    <!-- Logo and Menu Icon -->
+    <div class="logo-menu">
+      <span class="menu-icon">☰</span>
+      <a (click)="navigateToProducts()" class="logo">
+        <img src="assets/logo.png" alt="Logo">
+        <span>CompanyName</span>
+      </a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input type="text" [(ngModel)]="searchQuery" (keydown.enter)="onSearch()" placeholder="Search products...">
+      <button (click)="onSearch()">Search</button>
+    </div>
+
+    <!-- Icons -->
+    <div class="icons">
+      <span (click)="navigateToCart()" class="cart-icon">
+        🛒 {{ getCartItemCount() }}
+      </span>
+      <span (click)="toggleAccountOptions()" class="account-icon">👤</span>
+      <span class="help-icon">❓</span>
+    </div>
+  </div>
+
+  <!-- Account Options Dropdown -->
+  <div class="account-options" *ngIf="showAccountOptions">
+    <button (click)="login()">Se connecter</button>
+    <button (click)="register()">Créer un compte</button>
+  </div>
+</nav>

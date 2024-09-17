@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<h1>Liste des Produits</h1>
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollThrottle]="500"
+  [infiniteScrollDisabled]="false"
+  (scrolled)="onScroll()"
+  class="infinite-scroll-container"
+>
+  <div class="produits-container">
+    <div *ngFor="let produit of produits" class="produit-card">
+      <img loading="lazy" [src]="'http://localhost:5102' + produit.image" alt="{{ produit.image }}" class="produit-image">
+      <p><strong>Designation:</strong> {{ produit.designation }}</p>
+      <p><strong>Reference: </strong>{{ produit.reference }}</p>
+      <p>
+        <span class="old-price">{{ produit.oldPrice | currency }}</span>
+        <span class="promo-price">{{ produit.promoPrice | currency }}</span>
+      </p>
+      <div class="add-to-cart-container">
+        <button class="btn-add-cart" (click)="addToCart(produit)">
+          <span class="material-icons cart-icon">shopping_cart</span> Ajouter au panier
+        </button>
+        <div class="quantity-controls">
+          <button (click)="decreaseQuantity(produit)">-</button>
+          <input type="number" [(ngModel)]="produit.quantity" min="0" class="quantity-input">
+          <button (click)="increaseQuantity(produit)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="loading" class="loading-spinner">
+    Chargement...
+  </div>
+</div>

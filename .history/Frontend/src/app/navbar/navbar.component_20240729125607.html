@@ -1,0 +1,29 @@
+<nav>
+  <div class="navbar-container">
+    <button (click)="navigateToProducts()" class="menu-icon">
+      <i class="material-icons">menu</i>
+    </button>
+    <div class="logo">
+      <img src="assets/logo.png" alt="Company Logo" />
+      <h1>Nom de l'entreprise</h1>
+    </div>
+    <input 
+      type="text" 
+      [(ngModel)]="searchQuery" 
+      (keyup.enter)="onSearch()" 
+      placeholder="Rechercher des produits..." 
+    />
+    <button (click)="navigateToCart()" class="cart-icon">
+      <i class="material-icons">shopping_cart</i>
+      <span class="cart-item-count">{{ getCartItemCount() }}</span>
+    </button>
+    <button (click)="toggleAccountOptions()" class="account-icon">
+      <i class="material-icons">account_circle</i>
+    </button>
+  </div>
+  <div *ngIf="showAccountOptions" class="account-options">
+    <button (click)="login()">Se connecter</button>
+    <button (click)="register()">Créer un compte</button>
+    <button *ngIf="authService.isAuthenticated()" (click)="logout()">Déconnexion</button>
+  </div>
+</nav>

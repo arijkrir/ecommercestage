@@ -1,0 +1,18 @@
+{
+    "cities": [
+      {
+        "name": "Tunis",
+        "x": "200",   
+        "y": "150",   
+        "purchaseRate": 1200
+      },
+      {
+        "name": "Sfax",
+        "x": "300",
+        "y": "250",
+        "purchaseRate": 600
+      }
+      
+    ]
+  }
+  

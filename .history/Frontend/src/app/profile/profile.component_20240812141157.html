@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="profile-container">
+  <div class="profile-header">
+    <h2>Mon Profil</h2>
+    <p>Mettez à jour vos informations personnelles et de contact.</p>
+  </div>
+  
+  <form class="profile-form" (ngSubmit)="onSubmit()">
+    <!-- Section des informations personnelles -->
+    <div class="profile-section">
+      <h3>Informations Personnelles</h3>
+      <div class="form-group">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" [(ngModel)]="user.nom" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" [(ngModel)]="user.prenom" name="prenom" required>
+      </div>
+      <div class="form-group">
+        <label for="ville">Ville</label>
+        <input type="text" id="ville" [(ngModel)]="user.ville" name="ville">
+      </div>
+      <div class="form-group">
+        <label for="codePostal">Code Postal</label>
+        <input type="number" id="codePostal" [(ngModel)]="user.codePostal" name="codePostal">
+      </div>
+    </div>
+    
+    <!-- Section des informations de contact -->
+    <div class="profile-section">
+      <h3>Informations de Contact</h3>
+      <div class="form-group">
+        <label for="telephone">Numéro de téléphone</label>
+        <input type="tel" id="telephone" [(ngModel)]="user.telephone" name="telephone" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="motdepasse">Mot de Passe</label>
+        <input type="password" id="motdepasse" [(ngModel)]="user.motdePasse" name="motdepasse" required>
+      </div>
+    </div>
+    
+    <!-- Bouton de soumission -->
+    <div class="form-actions">
+      <button type="submit" class="btn-save">Enregistrer les modifications</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,50 @@
+.statistics-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: 70px;
+}
+
+.stat-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden; /* Assure que le contenu ne dépasse pas */
+}
+
+.stat-card h3 {
+  margin-top: 0;
+}
+
+.stat-card p {
+  margin-bottom: 0;
+}
+
+.chart-container {
+  background-color: #d3d3d3; /* Fond gris pour le conteneur du diagramme */
+  padding: 10px; /* Réduit le padding pour éviter le débordement */
+  border-radius: 8px;
+  width: 100%;
+  height: 300px; /* Fixe une hauteur pour contenir le graphique */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour le tableau PrimeNG */
+.user-table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.user-table th, .user-table td {
+  text-align: center; /* Centre le texte dans les cellules */
+}
+
+.user-table .table-cell {
+  padding: 10px; /* Ajoute un peu de padding pour la lisibilité */
+}

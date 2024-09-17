@@ -1,0 +1,23 @@
+<div class="statistics-container">
+    <div class="stat-card">
+      <h3>Villes les plus actives</h3>
+      <ng-container *ngFor="let city of topCities">
+        <p>{{ city.ville }}</p>
+        <p>Nombre de commandes : {{ city.commandes }}</p>
+      </ng-container>
+    </div>
+    <p *ngIf="!topCities.length && !errorMessage">Chargement des données...</p>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+    <div class="stat-card">
+        <h3>les clients les plus actifs</h3>
+        <p>les clients les plus actifs</p>
+        <!-- Détails dynamiques -->
+      </div>
+  
+    <div class="stat-card">
+      <h3>Produits les plus vendus</h3>
+      <p>Top produits les plus vendus</p>
+      <!-- Détails dynamiques -->
+    </div>
+  </div>
+  

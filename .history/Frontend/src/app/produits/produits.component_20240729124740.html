@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<h1>Liste des Produits</h1>
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollThrottle]="500"
+  [infiniteScrollDisabled]="false"
+  (scrolled)="onScroll()"
+  class="infinite-scroll-container"
+>
+  <div class="produits-container">
+    <div *ngFor="let produit of produits" class="produit-card">
+      <img loading="lazy" [src]="'http://localhost:5102' + produit.image" alt="{{ produit.image }}" class="produit-image">
+      <p><strong>Designation:</strong> {{ produit.designation }}</p>
+      <p><strong>Reference: </strong>{{ produit.reference }}</p>
+      <div>
+        <p><strong>Prix: </strong>
+          <span class="old-price" *ngIf="produit.oldPrice"> {{ produit.oldPrice | number:'1.2-2' }} DT</span>
+          <span class="promo-price"> {{ produit.promoPrice | number:'1.2-2' }} DT</span>
+        </p>
+        <div class="availability-status" [ngClass]="{'available': produit.available, 'not-available': !produit.available}">
+          {{ produit.available ? 'Disponible' : 'Non disponible' }}
+        </div>
+        <div class="quantity-warning">
+          Il reste {{ produit.stock }} produits
+        </div>
+        <div class="add-to-cart-container">
+          <button class="btn-add-cart" (click)="addToCart(produit)">
+            <span class="material-icons cart-icon">shopping_cart</span> Ajouter au panier
+          </button>
+          <div class="quantity-controls">
+            <button (click)="decreaseQuantity(produit)">-</button>
+            <span>{{ produit.quantity }}</span>
+            <button (click)="increaseQuantity(produit)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-cart *ngIf="showCart" [cartItems]="cartItems" (remove)="removeFromCart($event)"></app-cart>

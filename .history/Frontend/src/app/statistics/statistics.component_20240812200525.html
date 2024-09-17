@@ -1,0 +1,51 @@
+<div class="statistics-container">
+    <!-- Carte longue de PrimeNG -->
+    <p-card>
+      <ng-template pTemplate="header">
+        <div class="header">
+          <h2>Statistiques Générales</h2>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content">
+        <p>Contenu détaillé des statistiques générales.</p>
+      </ng-template>
+    </p-card>
+  
+    <!-- Trois cartes côte à côte -->
+    <div class="card-row">
+      <p-card class="card">
+        <ng-template pTemplate="header">
+          <div class="card-header">Carte 1</div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <p>Contenu de la carte 1</p>
+        </ng-template>
+      </p-card>
+  
+      <p-card class="card">
+        <ng-template pTemplate="header">
+          <div class="card-header">Carte 2</div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <p>Contenu de la carte 2</p>
+        </ng-template>
+      </p-card>
+  
+      <p-card class="card">
+        <ng-template pTemplate="header">
+          <div class="card-header">Répartition des Villes</div>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <div style="position: relative; height: 400px;">
+            <canvas baseChart
+              [data]="pieChartData"
+              [options]="pieChartOptions"
+              [plugins]="pieChartPlugins"
+              chartType="pie">
+            </canvas>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </div>
+  

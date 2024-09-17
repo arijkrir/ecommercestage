@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+<h1>Liste des Produits</h1>
+<div
+  infiniteScroll
+  [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollUpDistance]="scrollUpDistance"
+  [infiniteScrollTrackVisibility]="true"
+  (scrolled)="loadProductIds()"
+>
+  <div *ngFor="let produit of produits" class="produit-card">
+    <img [src]="produit.image" alt="{{ produit.designation }}" class="produit-image" />
+    <h2>{{ produit.designation }}</h2>
+    <p *ngIf="produit.oldPrice" class="old-price">{{ produit.oldPrice | currency }}</p>
+    <p *ngIf="produit.promoPrice" class="promo-price">{{ produit.promoPrice | currency }}</p>
+    <p *ngIf="produit.stock <= 0" class="availability-status not-available">Indisponible</p>
+    <p *ngIf="produit.stock > 0" class="availability-status available">Disponible</p>
+    <div class="quantity-controls">
+      <button (click)="decreaseQuantity(produit)">-</button>
+      <input type="text" [value]="produit.quantity" class="quantity-input" readonly />
+      <button (click)="increaseQuantity(produit)">+</button>
+    </div>
+    <button (click)="addToCart(produit)" class="btn-add-cart">
+      <i class="material-icons cart-icon">add_shopping_cart</i> Ajouter au panier
+    </button>
+  </div>
+</div>
+<button (click)="toggleCart()">Afficher le panier ({{ getCartItemCount() }})</button>
+<div *ngIf="showCart">
+  <h2>Votre Panier</h2>
+  <div *ngFor="let item of cartItems" class="produit-card">
+    <img [src]="item.image" alt="{{ item.designation }}" class="produit-image" />
+    <h2>{{ item.designation }}</h2>
+    <p>{{ item.promoPrice | currency }}</p>
+    <button (click)="removeFromCart(item)">Supprimer</button>
+  </div>
+</div>

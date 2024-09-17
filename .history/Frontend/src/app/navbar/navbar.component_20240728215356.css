@@ -1,0 +1,154 @@
+/* Navbar Styles */
+.navbar {
+  width: 100%;
+  background-color: #737373;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 7px 0;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Pour centrer le contenu */
+  margin: 0 auto;
+  padding: 0 20px; /* Espacement à gauche et à droite */
+}
+
+.navbar .left,
+.navbar .right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .menu-icon {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.navbar .company-logo {
+  height: 55px;
+  margin-left: 20px; /* Espacement à gauche du logo */
+}
+
+.navbar .company-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 20px; /* Espacement à gauche du nom de la société */
+  cursor: pointer;
+}
+
+.navbar .search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: 30px; /* Espacement à gauche de la barre de recherche */
+}
+
+.navbar .search-bar input {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  width: 300px; /* Réduit la largeur de la barre de recherche */
+  border: 1px solid #ffb6c1; /* Ajout de la bordure pour plus de visibilité */
+  outline: none;
+}
+
+.navbar .search-bar .material-icons {
+  margin-left: 7px;
+  cursor: pointer;
+  font-size: 27px;
+}
+
+.navbar .right .nav-item {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Espacement à gauche des éléments de la droite */
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar .nav-item h4 {
+  margin: 0 5px;
+}
+
+.navbar .cart-count {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+.material-icons.cart-icon {
+  font-size: 24px; /* Augmente la taille de l'icône du panier */
+  vertical-align: middle;
+}
+
+.account-options {
+  position: absolute;
+  top: 45px; /* Ajuste la position par rapport à la barre de navigation */
+  right: 0;
+  color: black;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  z-index: 1001;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: none; /* Masque l'élément par défaut */
+}
+
+.account-options.show {
+  display: block; /* Affiche l'élément lorsqu'il a la classe 'show' */
+}
+
+.account-options .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+}
+
+.accordion .accordion-item {
+  margin: 0;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.accordion .accordion-item i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.accordion .accordion-item h5 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.accordion .accordion-item:hover {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+.account-options .divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 8px 0;
+}

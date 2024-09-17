@@ -1,0 +1,87 @@
+.product-details-container {
+    max-width:100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-details {
+    display: flex;
+    align-items: flex-start; /* Alignement en haut pour l'image et les détails */
+  }
+  
+  .product-image {
+    max-width: 40%; /* Largeur maximale de l'image */
+    margin-right: 20px;
+    border-radius: 8px;
+  }
+  
+  .product-info {
+    flex: 1; /* Prend tout l'espace restant */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #a1a1a1;
+    margin-right: 10px;
+  }
+  
+  .promo-price {
+    color: #e53935;
+    font-weight: bold;
+  }
+  
+  .available {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .not-available {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .quantity-and-cart {
+    margin-top: 20px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espace entre la quantité et le bouton panier */
+  }
+  
+  .quantity-controls button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .quantity-controls input {
+    width: 50px;
+    text-align: center;
+    margin: 0 10px;
+  }
+  
+  .btn-add-cart {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e53935;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cart-icon {
+    margin-right: 5px;
+    font-size: 18px;
+  }
+  

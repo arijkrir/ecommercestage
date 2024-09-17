@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="true"></p-steps>
+
+<div *ngIf="activeIndex === 0">
+  <h2>Étape 1 : Informations personnelles</h2>
+  <form>
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="nom">Nom</label>
+        <input id="nom" pInputText [(ngModel)]="livraisonForm.nom" name="nom">
+      </div>
+      <div class="p-field">
+        <label for="prenom">Prénom</label>
+        <input id="prenom" pInputText [(ngModel)]="livraisonForm.prenom" name="prenom">
+      </div>
+      <div class="p-field">
+        <label for="email">Adresse mail</label>
+        <input id="email" pInputText [(ngModel)]="livraisonForm.email" name="email">
+      </div>
+      <div class="p-field">
+        <label for="telephone">Numéro de téléphone</label>
+        <input id="telephone" pInputText [(ngModel)]="livraisonForm.telephone" name="telephone">
+      </div>
+      <div class="p-field">
+        <label for="rue">Rue</label>
+        <input id="rue" pInputText [(ngModel)]="livraisonForm.rue" name="rue">
+      </div>
+      <div class="p-field">
+        <label for="ville">Ville</label>
+        <input id="ville" pInputText [(ngModel)]="livraisonForm.ville" name="ville">
+      </div>
+      <div class="p-field">
+        <label for="codePostal">Code Postal</label>
+        <input id="codePostal" pInputText [(ngModel)]="livraisonForm.codePostal" name="codePostal">
+      </div>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="activeIndex === 1">
+  <h2>Étape 2 : Choix de la livraison</h2>
+  <div class="p-field-checkbox">
+    <p-checkbox name="standard" value="Livraison standard" [(ngModel)]="livraisonForm.typeLivraison"></p-checkbox>
+    <label for="standard">Livraison standard</label>
+  </div>
+  <div class="p-field-checkbox">
+    <p-checkbox name="express" value="Livraison express" [(ngModel)]="livraisonForm.typeLivraison"></p-checkbox>
+    <label for="express">Livraison express</label>
+  </div>
+  <div class="p-field">
+    <label for="codePromo">Code promo</label>
+    <input id="codePromo" pInputText [(ngModel)]="livraisonForm.codePromo" name="codePromo">
+  </div>
+</div>
+
+<div *ngIf="activeIndex === 2">
+  <h2>Étape 3 : Récapitulatif</h2>
+  <p><strong>Nom :</strong> {{ livraisonForm.nom }}</p>
+  <p><strong>Prénom :</strong> {{ livraisonForm.prenom }}</p>
+  <p><strong>Adresse mail :</strong> {{ livraisonForm.email }}</p>
+  <p><strong>Numéro de téléphone :</strong> {{ livraisonForm.telephone }}</p>
+  <p><strong>Rue :</strong> {{ livraisonForm.rue }}</p>
+  <p><strong>Ville :</strong> {{ livraisonForm.ville }}</p>
+  <p><strong>Code Postal :</strong> {{ livraisonForm.codePostal }}</p>
+  <p><strong>Type de livraison :</strong> {{ livraisonForm.typeLivraison }}</p>
+  <p><strong>Code promo :</strong> {{ livraisonForm.codePromo }}</p>
+  <p><strong>Total après réduction :</strong> {{ totalAfterPromo }} DT</p>
+</div>
+
+<div class="buttons">
+  <button pButton type="button" label="Retour" icon="pi pi-arrow-left" (click)="previousStep()" *ngIf="activeIndex > 0"></button>
+  <button pButton type="button" label="Suivant" icon="pi pi-arrow-right" (click)="nextStep()" *ngIf="activeIndex < steps.length - 1"></button>
+  <button pButton type="button" label="Confirmer" icon="pi pi-check" (click)="confirmOrder()" *ngIf="activeIndex === steps.length - 1"></button>
+</div>

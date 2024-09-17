@@ -1,0 +1,89 @@
+/* Styles pour le conteneur principal des cartes */
+.statistics-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px; /* Réduit le padding autour des cartes */
+  margin-top: 70px; /* Réduit la marge supérieure pour rapprocher les cartes du haut de la page */
+}
+
+/* Styles généraux pour chaque carte de statistiques */
+.stat-card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 30%; /* Réduit la largeur des cartes */
+  padding: 10px; /* Réduit le padding à l'intérieur des cartes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  font-size: 0.9rem; /* Réduit la taille de la police pour une apparence plus compacte */
+}
+
+/* Styles pour les titres des cartes */
+.stat-card h3 {
+  margin-top: 0;
+  font-size: 1.1rem; /* Réduit la taille de la police des titres */
+}
+
+/* Styles pour les paragraphes des cartes */
+.stat-card p {
+  margin-bottom: 0;
+  font-size: 0.8rem; /* Réduit la taille de la police des paragraphes */
+}
+
+/* Styles pour le conteneur du graphique */
+.chart-container {
+  padding: 0px; /* Réduit le padding */
+  border-radius: 8px;
+  width: 100%;
+  height: 100%; /* Réduit la hauteur du conteneur du graphique */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles spécifiques pour la carte des clients les plus actifs */
+.stat-card.active-customers {
+  width: 40%; /* Augmente la largeur de la carte */
+  padding: 20px; /* Augmente le padding à l'intérieur de la carte */
+}
+
+/* Styles spécifiques pour le tableau des clients les plus actifs */
+.stat-card.active-customers .user-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.stat-card.active-customers .user-table th, 
+.stat-card.active-customers .user-table td {
+  text-align: center;
+  padding: 12px; /* Augmente le padding dans les cellules pour plus de confort */
+  border: 1px solid #ddd;
+}
+
+.stat-card.active-customers .user-table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  font-size: 1rem; /* Augmente la taille de la police des en-têtes du tableau */
+}
+
+/* Styles spécifiques pour les images dans la carte des clients les plus actifs */
+.stat-card.active-customers .user-table img {
+  width: 50px; /* Augmente la largeur des images */
+  height: 50px; /* Augmente la hauteur des images */
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.stat-card.active-customers .user-table .table-cell {
+  padding: 12px; /* Augmente le padding pour les cellules des produits */
+}
+
+.stat-card.active-customers .user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.stat-card.active-customers .user-table tr:hover {
+  background-color: #e2e2e2;
+}

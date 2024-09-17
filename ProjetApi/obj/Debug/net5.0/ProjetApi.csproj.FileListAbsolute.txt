@@ -1,0 +1,7 @@
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.csproj.AssemblyReference.cache
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.AssemblyInfoInputs.cache
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.AssemblyInfo.cs
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.csproj.CoreCompileInputs.cache
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\arijk\Desktop\ecommerce stage\ProjetApi\obj\Debug\net5.0\ProjetApi.sourcelink.json

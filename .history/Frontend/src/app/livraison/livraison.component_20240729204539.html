@@ -1,0 +1,70 @@
+<app-navbar></app-navbar>
+
+<div class="livraison-container">
+    <p-steps [model]="steps" [(activeIndex)]="activeIndex" [readonly]="true"></p-steps>
+  
+    <form class="livraison-form">
+      <div *ngIf="activeIndex === 0">
+        <div class="p-field">
+          <label for="nom">Nom</label>
+          <input id="nom" type="text" pInputText [(ngModel)]="livraisonForm.nom" name="nom">
+        </div>
+        <div class="p-field">
+          <label for="prenom">Prénom</label>
+          <input id="prenom" type="text" pInputText [(ngModel)]="livraisonForm.prenom" name="prenom">
+        </div>
+        <div class="p-field">
+          <label for="email">Email</label>
+          <input id="email" type="email" pInputText [(ngModel)]="livraisonForm.email" name="email">
+        </div>
+        <div class="p-field">
+          <label for="telephone">Téléphone</label>
+          <input id="telephone" type="tel" pInputText [(ngModel)]="livraisonForm.telephone" name="telephone">
+        </div>
+      </div>
+  
+      <div *ngIf="activeIndex === 1">
+        <div class="p-field">
+          <label for="rue">Rue</label>
+          <input id="rue" type="text" pInputText [(ngModel)]="livraisonForm.rue" name="rue">
+        </div>
+        <div class="p-field">
+          <label for="ville">Ville</label>
+          <input id="ville" type="text" pInputText [(ngModel)]="livraisonForm.ville" name="ville">
+        </div>
+        <div class="p-field">
+          <label for="codePostal">Code Postal</label>
+          <input id="codePostal" type="text" pInputText [(ngModel)]="livraisonForm.codePostal" name="codePostal">
+        </div>
+        <div class="p-field">
+          <label for="typeLivraison">Type de Livraison</label>
+          <input id="typeLivraison" type="text" pInputText [(ngModel)]="livraisonForm.typeLivraison" name="typeLivraison">
+        </div>
+        <div class="p-field">
+          <label for="codePromo">Code Promo</label>
+          <input id="codePromo" type="text" pInputText [(ngModel)]="livraisonForm.codePromo" name="codePromo">
+        </div>
+      </div>
+  
+      <div *ngIf="activeIndex === 2" class="livraison-summary">
+        <h3>Récapitulatif de la commande</h3>
+        <p><strong>Nom:</strong> {{ livraisonForm.nom }}</p>
+        <p><strong>Prénom:</strong> {{ livraisonForm.prenom }}</p>
+        <p><strong>Email:</strong> {{ livraisonForm.email }}</p>
+        <p><strong>Téléphone:</strong> {{ livraisonForm.telephone }}</p>
+        <p><strong>Rue:</strong> {{ livraisonForm.rue }}</p>
+        <p><strong>Ville:</strong> {{ livraisonForm.ville }}</p>
+        <p><strong>Code Postal:</strong> {{ livraisonForm.codePostal }}</p>
+        <p><strong>Type de Livraison:</strong> {{ livraisonForm.typeLivraison }}</p>
+        <p><strong>Code Promo:</strong> {{ livraisonForm.codePromo }}</p>
+        <p><strong>Total après réduction:</strong> <span class="total-after-promo">{{ totalAfterPromo | currency:'EUR' }}</span></p>
+      </div>
+  
+      <div class="livraison-buttons">
+        <button pButton type="button" label="Précédent" icon="pi pi-arrow-left" (click)="previousStep()" *ngIf="activeIndex > 0"></button>
+        <button pButton type="button" label="Suivant" icon="pi pi-arrow-right" (click)="nextStep()" *ngIf="activeIndex < steps.length - 1"></button>
+        <button pButton type="button" label="Confirmer la commande" icon="pi pi-check" (click)="confirmOrder()" *ngIf="activeIndex === steps.length - 1"></button>
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,16 @@
+<div class="statistics-container">
+    <div class="stat-card" *ngFor="let city of topCities">
+      <h3>Ville la plus active</h3>
+      <p>{{ city.ville }}</p>
+      <p>Nombre de commandes : {{ city.commandes }}</p>
+    </div>
+    <p *ngIf="!topCities.length && !errorMessage">Chargement des données...</p>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+  
+    <div class="stat-card">
+      <h3>Produits les plus vendus</h3>
+      <p>Top produits les plus vendus</p>
+      <!-- Détails dynamiques -->
+    </div>
+  </div>
+  

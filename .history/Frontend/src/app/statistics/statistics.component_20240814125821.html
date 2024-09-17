@@ -1,0 +1,28 @@
+<div class="statistics-container">
+  <div class="stat-card">
+    <h3>Villes les plus actives</h3>
+    <div *ngIf="chartData.length > 0">
+      <google-chart 
+        [type]="chartType" 
+        [data]="chartData" 
+        [options]="chartOptions" 
+        [width]="400" 
+        [height]="300">
+      </google-chart>
+    </div>
+    <p *ngIf="!topCities.length && !errorMessage">Chargement des données...</p>
+    <p *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+
+  <div class="stat-card">
+    <h3>Les clients les plus actifs</h3>
+    <p>Les clients les plus actifs</p>
+    <!-- Détails dynamiques -->
+  </div>
+
+  <div class="stat-card">
+    <h3>Produits les plus vendus</h3>
+    <p>Top produits les plus vendus</p>
+    <!-- Détails dynamiques -->
+  </div>
+</div>

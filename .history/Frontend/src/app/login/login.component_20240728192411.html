@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<div class="login-form p-card p-shadow-3">
+    <h2>Se connecter</h2>
+    <form (ngSubmit)="submitLoginForm()" #loginForm="ngForm" class="p-fluid">
+      <div class="p-field">
+        <label for="email">Email ou Téléphone :</label>
+        <input pInputText type="text" id="email" name="email" [(ngModel)]="loginFormModel.email" required>
+      </div>
+      <div class="p-field">
+        <label for="password">Mot de passe :</label>
+        <input pInputText type="password" id="password" name="password" [(ngModel)]="loginFormModel.password" required>
+      </div>
+      <button pButton type="submit" label="Se connecter" icon="pi pi-sign-in"></button>
+    </form>
+  </div>
+  
+  

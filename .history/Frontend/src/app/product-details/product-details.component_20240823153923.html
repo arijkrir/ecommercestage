@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+<div class="main-content-container">
+  <!-- Product Details Section -->
+  <div *ngIf="produit" class="product-details-container">
+    <div class="product-details">
+      <img [src]="'http://localhost:5102' + produit.image" alt="{{ produit.designation }}" class="product-image">
+      <div class="product-info">
+        <h1>{{ produit.designation }}</h1>
+        <p><strong>Référence: </strong>{{ produit.reference }}</p>
+        <p><strong>Prix: </strong>
+          <span *ngIf="produit.oldPrice" class="old-price">{{ produit.oldPrice | number:'1.2-2' }} DT</span>
+          <span class="promo-price">{{ produit.promoPrice | number:'1.2-2' }} DT</span>
+        </p>
+        <div [ngClass]="{'available': produit.available, 'not-available': !produit.available}">
+          {{ produit.available ? 'Disponible' : 'Non disponible' }}
+        </div>
+        <p *ngIf="produit.stock">Il reste {{ produit.stock }} produits</p>
+        <div class="quantity-and-cart">
+          <div class="quantity-controls">
+            <button (click)="decreaseQuantity()" [disabled]="quantity <= 1">-</button>
+            <input type="number" [(ngModel)]="quantity" min="1" class="quantity-input"
+              [attr.max]="produit.stock !== undefined ? produit.stock : null"
+              [ngClass]="{'disabled': !produit.available}" [disabled]="!produit.available">
+            <button (click)="increaseQuantity()" [disabled]="produit.stock !== undefined && quantity >= produit.stock">+</button>
+          </div>
+          <button class="btn-add-cart" (click)="addToCart()">
+            <span class="material-icons cart-icon">shopping_cart</span> Ajouter au panier
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Similar Products Section -->
+  <div *ngIf="upsellingProducts.length > 0" class="upselling-products-container">
+    <h2>Produits similaires</h2>
+    <div class="upselling-products">
+      <div *ngFor="let product of upsellingProducts" class="upselling-product-card">
+        <a [routerLink]="['/product-details', product.id]">
+          <img [src]="'http://localhost:5102' + product.image" alt="Product Image" class="upselling-product-image">
+          <h4>{{ product.designation }}</h4>
+          <p>{{ product.promoPrice | number:'1.2-2' }} DT</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+{
+    "cities": [
+      {
+        "name": "Tunis",
+        "x": "200",   // Coordonnées x dans l'image
+        "y": "150",   // Coordonnées y dans l'image
+        "purchaseRate": 1200
+      },
+      {
+        "name": "Sfax",
+        "x": "300",
+        "y": "250",
+        "purchaseRate": 600
+      }
+      // Ajoutez d'autres villes ici
+    ]
+  }
+  

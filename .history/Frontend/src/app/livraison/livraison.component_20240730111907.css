@@ -1,0 +1,161 @@
+/* Conteneur principal */
+.livraison-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 17px;
+  background-color: #fefdfe; /* Rose clair */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaire */
+.livraison-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.livraison-form .p-field {
+  margin-bottom: 15px;
+}
+
+.livraison-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Champs de formulaire */
+.livraison-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #959293; /* Rose clair */
+  border-radius: 4px;
+}
+
+/* Focus pour les champs de formulaire */
+.livraison-form input:focus {
+  border-color: #ffb3c6 !important; /* Rose clair */
+  box-shadow: 0 0 5px rgba(255, 179, 198, 0.5) !important; /* Ombre rose clair */
+}
+
+/* Étapes actives */
+.p-steps .p-steps-item.p-steps-item-active .p-steps-number {
+  background-color: #ff9eac !important; /* Rose légèrement plus foncé */
+  border-color: #ff9eac !important; /* Bordure rose légèrement plus foncé */
+}
+
+/* Hover des étapes */
+.p-steps .p-steps-item:hover .p-steps-number {
+  background-color: #ff9eac !important; /* Rose légèrement plus foncé */
+  border-color: #ff9eac !important; /* Bordure rose légèrement plus foncé */
+}
+
+/* Étapes complètes */
+.p-steps .p-steps-item.p-steps-item-complete .p-steps-number {
+  background-color: #ffb3c6 !important; /* Rose clair */
+  border-color: #ffb3c6 !important; /* Bordure rose clair */
+}
+
+
+/* Boutons */
+.livraison-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.livraison-buttons button {
+  padding: 10px 20px;
+  background-color: #ffb3c6 !important; /* Rose clair */
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+/* Hover pour les boutons */
+.livraison-buttons button:hover {
+  background-color: #ff9eac !important; /* Rose légèrement plus foncé */
+}
+
+/* Active pour les boutons */
+.livraison-buttons button:active {
+  background-color: #ff7f8d !important; /* Rose encore plus foncé */
+}
+
+/* Résumé de livraison */
+.livraison-summary {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f6cee1; /* Rose clair */
+  border: 1px solid #8c8a8b; /* Rose clair */
+  border-radius: 4px;
+}
+
+.livraison-summary h3 {
+  margin-top: 0;
+}
+
+.total-after-promo {
+  font-weight: bold;
+  color: #d32f2f;
+}
+
+/* Options de livraison */
+.livraison-options {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.option input {
+  display: none;
+}
+
+.option label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option label i {
+  margin-top: 10px;
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #a29ca0; /* Rose gris */
+}
+
+.option input:checked + label {
+  border: 2px solid #f8c9d4; /* Rose clair */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Champs de carte */
+.card-fields {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  margin-left: 60px;
+}
+
+.card-fields .p-field {
+  flex: 1;
+}
+
+.card-fields input {
+  width: 100%;
+}
+
+/* Champ de code promo */
+.promo-field input {
+  width: 100%; /* Ajusté pour s'aligner avec les autres champs */
+}

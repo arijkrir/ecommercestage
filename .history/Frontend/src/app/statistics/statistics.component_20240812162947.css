@@ -1,0 +1,21 @@
+/* statistics.component.css */
+.statistics-container {
+    padding: 20px;
+  }
+  
+  .card-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .card {
+    flex: 1;
+    margin: 0 10px;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  

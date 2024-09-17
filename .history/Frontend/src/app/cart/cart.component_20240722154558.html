@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="cart-container">
+  <h1> </h1>
+  <div *ngFor="let produit of cartItems" class="cart-item">
+    <img loading="lazy" [src]="'http://localhost:5102' + produit.image" alt="{{ produit.image }}" class="cart-item-image">
+    <div class="cart-item-details">
+      <div>
+        <p><strong>Designation:</strong> {{ produit.designation }}</p>
+        <p><strong>Reference:</strong> {{ produit.reference }}</p>
+        <p><strong>Prix: </strong>
+          <span class="old-price"> {{ produit.oldPrice | number:'1.2-2' }} DT</span>
+          <span class="promo-price"> {{ produit.promoPrice | number:'1.2-2' }} DT</span>
+        </p>
+      </div>
+      <div class="availability-status" [ngClass]="{'available': produit.available, 'not-available': !produit.available}">
+        {{ produit.available ? 'Disponible' : 'Non disponible' }}
+      </div>
+      <div class="quantity-warning">
+        Il reste {{ produit.stock }} produits
+      </div>
+      <div class="quantity-controls">
+        <button (click)="decreaseQuantity(produit)" [disabled]="produit.quantity <= 1">-</button>
+        <input type="number" [(ngModel)]="produit.quantity" min="1" class="quantity-input" [attr.max]="produit.stock" [ngClass]="{'disabled': !produit.available}" [disabled]="!produit.available">
+        <button (click)="increaseQuantity(produit)" [disabled]="produit.quantity >= produit.stock">+</button>
+      </div>
+    </div>
+    <button class="btn-remove" (click)="removeFromCart(produit)">Supprimer</button>
+  </div>
+
+  <div *ngIf="cartItems.length === 0" class="cart-empty">
+    Votre panier est vide.
+  </div>
+
+  <div class="cart-divider"></div>
+
+  <div class="cart-total">
+    <p>Total: {{ calculateTotal() | number:'1.2-2' }} DT</p>
+  </div>
+
+  <div class="boutons">
+    <button routerLink="/produits"><i class="fa fa-arrow-left"></i> Retour aux produits</button>
+    <button class="btn-confirm" (click)="confirmOrder()">Confirmer la commande</button>
+  </div>
+</div>
